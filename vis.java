@@ -1,15 +1,26 @@
-package com.candidjava.code;
-
-class SumOfNum
+import java.util.Scanner;
+class Numofdigit 
 {
-	public static void main(String args[])
-	{
-		int sum = 0;
-		int n=10;
-		for(int i = 1;i <= n;i++)
-		{
-			sum = sum + i;
-		}
-		System.out.println("The Sum Of "+n+" Numbers are:" + sum);
-	}
+public static void main(String[] args) 
+{
+ int no,a=0;
+ Scanner s=new Scanner(System.in);
+System.out.println("Enter any number : ");
+ no = s.nextInt();
+
+if(no<0)
+{
+no=no * -1;
+}
+else if(no==0)
+{
+no=1;
+}
+while(no>0)
+{
+no=no/10;
+a++;
+}
+System.out.println("Number of Digits in given number is: "+a);
+}
 }
